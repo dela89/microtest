@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <div>
+      Total Words: {{totalWords}}
+    </div>
+    <table border=1>
+      <tr>
+        {% autoescape false %}
+        <td>Starts with a vowel: {{startsWithVowel}}</td>
+        <td>Doesn't start with a vowel: {{doesntStartWithVowel}}</td>
+        <td>Sailor has appeared: {{numberOfSailor}}</td>
+        <td>Window has appeared: {{numberOfWindow}}</td>
+        <td>Average Word Length: {{averageWords}}</td>
+        {% endautoescape %}
+      </tr>
+    </table>
+  </body>
+</html>
