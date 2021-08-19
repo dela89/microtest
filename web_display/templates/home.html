@@ -1,18 +1,17 @@
 <html>
   <body>
     <div>
-      Total Words: {{totalWords}}
+      <!--Total Words: {{totalWords}}-->
     </div>
-    <table border=1>
-      <tr>
-        {% autoescape false %}
-        <td>Starts with a vowel: {{startsWithVowel}}</td>
-        <td>Doesn't start with a vowel: {{doesntStartWithVowel}}</td>
-        <td>Sailor has appeared: {{numberOfSailor}}</td>
-        <td>Window has appeared: {{numberOfWindow}}</td>
-        <td>Average Word Length: {{averageWords}}</td>
-        {% endautoescape %}
-      </tr>
-    </table>
+	<table border=1>
+	    <tr>
+		{% autoescape false %}
+		<td>Ratio of words beginning in a vowel: {{ratio_vowel}}</td>
+		<td>Occurrences of word boat: {{occurrences_of_boat}}</td>
+		<td>Occurrences of words derived from boat: {{occurrences_of_boat_derivatives}}</td>
+		<td>Average word length: {{average_word_len}}</td>
+		{% endautoescape %}
+	    </tr>
+	</table>
   </body>
 </html>

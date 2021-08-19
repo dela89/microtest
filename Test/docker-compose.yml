@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  webclient: 
+    image: 'eoindela/web_display:0.2'
+    ports: 
+      - "8080:5000"
+    depends_on:
+      - "redis"
+      - "greeter_client"
+    environment:
+      FLASK_ENV: development
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+  greeter_server:
+      image: 'eoindela/read_book:1.2' 
+      ports:       
+        - "50051:50051"  
+  greeter_client: 
+      image: 'eoindela/analyse_book:1.0' 
+      depends_on:      
+          - "greeter_server"   
+
+

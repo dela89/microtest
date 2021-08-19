@@ -40,7 +40,7 @@ def run():
                         totalwords += 1
                         words.append(response.word)
 
-        redis_db = redis.StrictRedis(host='redis', port=6379)
+        redis_db = redis.Redis(host='redis', port=6379)
         vowels = 'aeoiu'
         words_begin_vowel = 0
         ratio_vowel = 0
